@@ -1,13 +1,9 @@
 body {
-    font-family: 'Tajawal', sans-serif;
-
-    /* صورة متحركة كخلفية */
-    background-image: url(../picer/ee.gif); /* ضع مسار صورتك المتحركة هنا */
-    background-size: cover;       /* تغطي كامل الشاشة */
-    background-position: center;  /* تمركز الصورة */
-    background-repeat: no-repeat; /* عدم التكرار */
-    
-    min-height: 100vh;
+  background-image: url(../picer/ee.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* يجعل الخلفية ثابتة عند التمرير */
 }
 
 /* باقي كودك بدون تغيير */
