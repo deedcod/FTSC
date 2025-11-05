@@ -1,42 +1,60 @@
 body {
-  background-image: url(../picer/ee.gif);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* يجعل الخلفية ثابتة عند التمرير */
+  background-image: url(../picer/ee.apng);
+  background-size: cover;           /* تغطي الشاشة بدون تمدد */
+  background-position: center;      /* تمركز مثالي */
+  background-repeat: no-repeat;     /* لا تتكرر */
+  background-attachment: scroll;    /* أفضل توافق مع الموبايل */
+  background-color: #000;           /* لون احتياطي عند التحميل */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Tajawal', sans-serif;
 }
 
-/* باقي كودك بدون تغيير */
+/* لضبط التجاوب بين الأجهزة */
+@media (max-width: 1024px) {
+  body {
+    background-position: top center; /* تركّز الجزء العلوي بالموبايل */
+    background-size: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-size: contain;       /* لو الشاشة صغيرة جداً */
+  }
+}
+
+/* باقي كودك كما هو */
 .social-card {
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-img {
-    border: 4px solid white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .animate-pulse {
-    animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
-.text-gray-600
-{
-   font-size: 18px;        
-    color: black;         
-    font-weight: bold;      
-    text-align: center; 
-    line-height: 1.5;     
-    font-family: 'Tajawal', sans-serif; 
+
+.text-gray-600 {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Tajawal', sans-serif;
 }
